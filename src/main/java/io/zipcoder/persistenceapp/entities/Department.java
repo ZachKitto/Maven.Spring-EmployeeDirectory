@@ -1,9 +1,7 @@
 package io.zipcoder.persistenceapp.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Department {
@@ -13,6 +11,9 @@ public class Department {
     private Long id;
     private String name;
     private Employee manager;
+
+//    @OneToMany(mappedBy = "department")
+//    private Set<Employee> employees;
 
     public Department() {
     }

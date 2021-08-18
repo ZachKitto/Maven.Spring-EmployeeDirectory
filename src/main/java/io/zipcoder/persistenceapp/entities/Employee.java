@@ -2,10 +2,7 @@ package io.zipcoder.persistenceapp.entities;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -24,6 +21,9 @@ public class Employee {
     private Employee manager;
     private Integer departmentNumber;
 
+//    @ManyToOne
+//    @JoinColumn(name = "id")
+//    private Department department;
 
     public Employee() {
     }
